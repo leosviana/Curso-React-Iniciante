@@ -4,9 +4,9 @@ function App(){
   return (
     <div> 
       <h1>Olá mundo!</h1>
-      <Titulo />
-      <Titulo />
-      <Titulo />
+      <Titulo amigo="Fulano" cor="red"/>
+      <Titulo cor="blue"/>
+      <Titulo cor="green" />
     </div>
   )
          
