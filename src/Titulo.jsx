@@ -9,7 +9,7 @@ function Titulo({amigo, cor}){ /* Recuperando o PROPs "nome" */
     const urlImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/120px-React_Logo_SVG.svg.png";
 
     function clicou(){
-        setTexto(inputText);
+        setTexto(inputText); {/* Carrega as informações da variável "userState" que está declarada */}
     }
 
     return (
@@ -20,10 +20,10 @@ function Titulo({amigo, cor}){ /* Recuperando o PROPs "nome" */
             <p>Soma: 10 + 10 = {soma}</p>    {/* Texto com interpolação de variável numérica */}
             <img width={100} src={urlImg} /> {/* Imagem com interpolação de variável de imagem */}
             <br />
-            <input value={inputText} onChange={(e)=>{setInputText(e.target.value)}} type="text" />
+            <input value={inputText} onChange={(e)=>{setInputText(e.target.value)}} type="text" /> {/* Armazena as informações digitadas no input dentro da variavel "userState" que está declarada */}
             <br />
             <button onClick={()=>{setTexto("Mudei título via botão")}}>Mudar título simples</button>
-            <button onClick={clicou}>Mudar título caixa de texto</button>
+            <button onClick={clicou}>Mudar título pelo digitado na caixa de texto</button>
         </div>
     )
 }
